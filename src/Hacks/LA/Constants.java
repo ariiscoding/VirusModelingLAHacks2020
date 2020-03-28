@@ -14,6 +14,7 @@ public class Constants {
     public static final double AVERAGE_MOBILITY = 0.2;
 
     //Healthcare system-related
+    public static final int POPULATION = 1000;
     public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.15; //as a percentage of total population in a city
     public static final double HOSPITAL_FATALITY_RATE_DECREMENT = 0.8; //how much death rate is decreased by when in hospital
     public static final int AVERAGE_CURE_TIME = 10; //days
