@@ -8,7 +8,10 @@ public class Constants {
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
 
     //Person-related
-    public static final int UPPER_AGE_LIMIT = 100;
+    public static final int LOWER_AGE_LIMIT = 0; //inclusive lower limit
+    public static final int UPPER_AGE_LIMIT = 100; //inclusive upper limit
+    public static final double PREEXISTING_CONDITION_PROB = 0.3;
+    public static final double AVERAGE_MOBILITY = 0.2;
 
     //Healthcare system-related
     public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.15; //as a percentage of total population in a city
