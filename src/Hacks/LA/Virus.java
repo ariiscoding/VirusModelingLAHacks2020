@@ -10,9 +10,9 @@ public class Virus {
     private Virus(){
     }
 
-    public getInfo(){
-        System.out.println("The current virus has an infection rate of ", INFECTION_RATE, ".");
-        System.out.println("The incubation period lasts ", INCUBATION_PERIOD, " days.");
-        System.out.println("The default fatality rate is ", DEATH_RATE, ".");
+    public static void getInfo(){
+        System.out.println("The current virus has an infection rate of " + INFECTION_RATE + ".");
+        System.out.println("The incubation period lasts " + INCUBATION_PERIOD + " days.");
+        System.out.println("The default fatality rate is " +  DEATH_RATE + ".");
     }
 }
