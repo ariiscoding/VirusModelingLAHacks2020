@@ -4,12 +4,28 @@
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585427890980</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated hospital.java">
+      <created>1585437490995</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585437490995</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update virus.java">
+      <created>1585437570340</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585437570340</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +179,9 @@
     <MESSAGE value="Added &quot;Constants.java&quot;" />
     <MESSAGE value="added virus info" />
     <MESSAGE value="Merged from latest from Ari" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged from latest from Ari" />
+    <MESSAGE value="Updated hospital.java" />
+    <MESSAGE value="Update virus.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update virus.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1084" y="1827" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585427681733">
@@ -157,33 +189,33 @@
     </state>
     <state x="489" y="276" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1280.713@0.23.1280.713" timestamp="1585422482071" />
     <state x="1084" y="1827" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585427681733" />
-    <state x="542" y="1540" key="CommitChangelistDialog2" timestamp="1585437490830">
+    <state x="542" y="1540" key="CommitChangelistDialog2" timestamp="1585437570167">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="76" y="23" key="CommitChangelistDialog2/0.23.1280.713@0.23.1280.713" timestamp="1585422609361" />
     <state x="76" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1585427223853" />
     <state x="1120" y="480" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387127525" />
-    <state x="542" y="1540" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585437490830" />
-    <state width="1141" height="218" key="GridCell.Tab.0.bottom" timestamp="1585422120788">
+    <state x="542" y="1540" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585437570167" />
+    <state width="1331" height="243" key="GridCell.Tab.0.bottom" timestamp="1585438560225">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
-    <state width="1141" height="218" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422120788" />
-    <state width="1141" height="218" key="GridCell.Tab.0.center" timestamp="1585422120787">
+    <state width="1331" height="243" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585438560225" />
+    <state width="1331" height="243" key="GridCell.Tab.0.center" timestamp="1585438560223">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
-    <state width="1141" height="218" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422120787" />
-    <state width="1141" height="218" key="GridCell.Tab.0.left" timestamp="1585422120786">
+    <state width="1331" height="243" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585438560223" />
+    <state width="1331" height="243" key="GridCell.Tab.0.left" timestamp="1585438560222">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151062" />
-    <state width="1141" height="218" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422120786" />
-    <state width="1141" height="218" key="GridCell.Tab.0.right" timestamp="1585422120787">
+    <state width="1331" height="243" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585438560222" />
+    <state width="1331" height="243" key="GridCell.Tab.0.right" timestamp="1585438560224">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
-    <state width="1141" height="218" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422120787" />
+    <state width="1331" height="243" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585438560224" />
     <state x="1326" y="517" key="SettingsEditor" timestamp="1585386459992">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
@@ -204,6 +236,10 @@
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="717" y="1759" key="git4idea.merge.GitPullDialog/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585427948141" />
+    <state x="921" y="960" key="run.anything.popup" timestamp="1585437634028">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="921" y="960" key="run.anything.popup/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585437634028" />
     <state x="955" y="1722" width="670" height="676" key="search.everywhere.popup" timestamp="1585421368843">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>

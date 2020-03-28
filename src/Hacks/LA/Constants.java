@@ -24,5 +24,7 @@ public class Constants {
     public static final double INFECTION_RATE = 0.7; //infection rate when one cell away
     public static final int INCUBATION_PERIOD = 14; //days
     public static final double DEATH_RATE = 0.01; //for people at and under the age of 30
-    public static final double DEATH_RATE_INCREMENT = 0.004; //per age over 30
+    public static final double DEATH_RATE_INCREMENT_AGE = 0.004;
+    public static final int DANGER_AGE = 40;
+    public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
 }

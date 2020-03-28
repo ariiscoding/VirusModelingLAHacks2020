@@ -9,7 +9,7 @@ public class Person {
     private boolean preexistingConditions;
     private double mobility;
     private Integer infectionTime; //TODO: self-healing function
-    private Integer hospitalzedTime;
+    private Integer hospitalizedTime;
     //Todo: add necessary setters
 
     public Person (int x, int y) {
@@ -25,24 +25,26 @@ public class Person {
         this.mobility = mobility;
         deathRateWhenInfected = calculateDeathRate();
         infectionTime = null;
-        hospitalzedTime = null;
+        hospitalizedTime = null;
     }
 
     public boolean hospitalize (Hospital hospital) {
         if (hospital.hospitalize(this)) {
             state = State.HOSPITALIZED;
-            hospitalzedTime = Time.getTime();
+            hospitalizedTime = Time.getTime();
+            calculateDeathRate();
             return true;
         }
         return false;
     }
 
-    public boolean determineCure (Hospital hospital) {
+    public boolean cure (Hospital hospital) {
+        calculateDeathRate();
         if (state == State.INFECTED && infectionTime != null && infectionTime >= Constants.SELF_CURE_TIME) {
             state = State.IMMUNE;
             return true;
         }
-        else if (state == State.HOSPITALIZED && hospitalzedTime != null && hospitalzedTime >= Constants.HOSPITAL_CURE_TIME && hospital.release(this)) {
+        else if (state == State.HOSPITALIZED && hospitalizedTime != null && hospitalizedTime >= Constants.HOSPITAL_CURE_TIME && hospital.release(this)) {
             state = State.IMMUNE;
             return true;
         }
@@ -50,7 +52,12 @@ public class Person {
     }
 
     public boolean determineDeath (Hospital hospital) {
-        //TODO: roll the dice and see if the person die
+        //roll the dice and see if the person die
+        double hades = Utils.randomProbUniform();
+
+        if (hades <= deathRateWhenInfected) {
+            return die(hospital);
+        }
 
         return false;
     }
@@ -80,8 +87,17 @@ public class Person {
     }
 
     private double calculateDeathRate () {
-        //TODO: review this function when virus class is ready.
-        return Constants.DEATH_RATE + (double)age * Constants.DEATH_RATE_INCREMENT;
+        //Death rate = (base death rate + age over 30 * increment percentage + pre-existing condition) / hospital decrement
+        double deathRate = Constants.DEATH_RATE + Constants.DEATH_RATE_INCREMENT_AGE * Math.max(0, age - Constants.DANGER_AGE);
+        if (preexistingConditions) {
+            deathRate += Constants.DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS;
+        }
+        if (state == State.HOSPITALIZED) {
+            deathRate *= (1-Constants.HOSPITAL_FATALITY_RATE_DECREMENT);
+        }
+
+        this.deathRateWhenInfected = deathRate;
+        return deathRate;
     }
 
     public int getX() {

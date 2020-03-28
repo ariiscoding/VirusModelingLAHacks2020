@@ -21,6 +21,10 @@ public class Utils {
         }
     }
 
+    public static double randomProbUniform () {
+        return random.nextDouble();
+    }
+
     public static double randomProb (double center) {
         //randomly generate a probability between 0 (inclusive) and 1 (exclusive)
         return randomProb(center, 0, 1);
