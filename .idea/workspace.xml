@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/HealthCareFacilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/HealthCareFacilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Hospital.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585422609683</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added &quot;Constants.java&quot;">
+      <created>1585425087712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585425087712</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,10 +124,11 @@
       <screen x="0" y="23" width="1280" height="713" />
     </state>
     <state x="489" y="276" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1280.713@0.23.1280.713" timestamp="1585422482071" />
-    <state x="76" y="23" key="CommitChangelistDialog2" timestamp="1585422609361">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state x="76" y="23" key="CommitChangelistDialog2" timestamp="1585425087467">
+      <screen x="0" y="23" width="1280" height="715" />
     </state>
     <state x="76" y="23" key="CommitChangelistDialog2/0.23.1280.713@0.23.1280.713" timestamp="1585422609361" />
+    <state x="76" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1585425087467" />
     <state x="1120" y="480" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387127525" />
     <state x="542" y="1540" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422120755" />
     <state width="1141" height="218" key="GridCell.Tab.0.bottom" timestamp="1585422120788">

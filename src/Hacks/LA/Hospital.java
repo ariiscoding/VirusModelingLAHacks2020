@@ -2,13 +2,13 @@ package Hacks.LA;
 
 import java.util.List;
 
-public class HealthCareFacilities {
+public class Hospital {
     private double HOSPITAL_CAPACITY_PERCENTAGE = Constants.HOSPITAL_CAPACITY_PERCENTAGE; //as a percentage of total population in a city
     private double HOSPITAL_FATALITY_RATE_DECREMENT = Constants.HOSPITAL_FATALITY_RATE_DECREMENT; //how much death rate is decreased by when in hospital
     private double AVERAGE_CURE_TIME = Constants.AVERAGE_CURE_TIME; //days
     private int capacity = (int) (HOSPITAL_CAPACITY_PERCENTAGE * Constants.POPULATION);
 
-    private HealthCareFacilities(){
+    private Hospital(){
     }
 
     private void hospitalize(Person patient) {
