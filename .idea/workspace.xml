@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,18 +67,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -95,42 +87,7 @@
       <option name="project" value="LOCAL" />
       <updated>1585387127769</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added &quot;Constants.java&quot;">
-      <created>1585422609683</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1585422609683</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added &quot;Constants.java&quot;">
-      <created>1585425087712</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1585425087712</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added &quot;Constants.java&quot;">
-      <created>1585425759338</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1585425759338</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added &quot;Constants.java&quot;">
-      <created>1585426162141</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1585426162141</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added virus info">
-      <created>1585427224169</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1585427224169</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,20 +95,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added &quot;Constants.java&quot;" />
-    <MESSAGE value="added virus info" />
-    <option name="LAST_COMMIT_MESSAGE" value="added virus info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;Constants.java&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1084" y="1827" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585427681733">
+    <state x="542" y="1540" key="CommitChangelistDialog2" timestamp="1585422120755">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
-    <state x="489" y="276" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1280.713@0.23.1280.713" timestamp="1585422482071" />
-    <state x="1084" y="1827" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585427681733" />
-    <state x="76" y="23" key="CommitChangelistDialog2" timestamp="1585427223853">
-      <screen x="0" y="23" width="1280" height="715" />
-    </state>
-    <state x="76" y="23" key="CommitChangelistDialog2/0.23.1280.713@0.23.1280.713" timestamp="1585422609361" />
-    <state x="76" y="23" key="CommitChangelistDialog2/0.23.1280.715@0.23.1280.715" timestamp="1585427223853" />
     <state x="1120" y="480" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387127525" />
     <state x="542" y="1540" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422120755" />
     <state width="1141" height="218" key="GridCell.Tab.0.bottom" timestamp="1585422120788">
@@ -178,11 +127,9 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1326" y="517" key="SettingsEditor/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585386459992" />
-    <state x="480" y="217" key="Vcs.Push.Dialog.v2" timestamp="1585426958355">
-      <screen x="0" y="23" width="1280" height="715" />
+    <state x="1424" y="618" key="Vcs.Push.Dialog.v2" timestamp="1585412909718">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="480" y="216" key="Vcs.Push.Dialog.v2/0.23.1280.713@0.23.1280.713" timestamp="1585422658103" />
-    <state x="480" y="217" key="Vcs.Push.Dialog.v2/0.23.1280.715@0.23.1280.715" timestamp="1585426958355" />
     <state x="1424" y="618" key="Vcs.Push.Dialog.v2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585412909718" />
     <state x="1497" y="2028" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585422141017">
       <screen x="442" y="1463" width="1680" height="1027" />
