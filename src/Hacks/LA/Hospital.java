@@ -11,11 +11,17 @@ public class Hospital {
     private Hospital(){
     }
 
-    private int updateCapacity() {
-
+    public boolean release(Person patient) { //determine if a person can be released from hospital, called by Person class
+        if (patient.getState() == "HOSPITALIZED") {
+            capacity++;
+            return true;
+        } else {
+            return false;
+        }
+        return false;
     }
 
-    public boolean hospitalize(Person patient) {
+    public boolean hospitalize(Person patient) { //determine if a person can be hospitalized
         if (patient.getState() == "INFECTED") {
             if (!isFull()) {
                 capacity--;
