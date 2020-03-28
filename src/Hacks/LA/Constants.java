@@ -2,8 +2,8 @@ package Hacks.LA;
 
 public class Constants {
     //Cluster-related
-    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 100;
-    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 60;
+    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 50;
+    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 30;
     public static final int NUMBER_OF_CLUSTERS = 10;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
 
