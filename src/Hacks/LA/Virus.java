@@ -7,12 +7,9 @@ public class Virus {
     public static final double DEATH_RATE_INCREMENT = Constants.DEATH_RATE_INCREMENT; //per age over 30
 
 
-    private Virus(){
-    }
-
     public static void getInfo(){
         System.out.println("The current virus has an infection rate of " + INFECTION_RATE + ".");
         System.out.println("The incubation period lasts " + INCUBATION_PERIOD + " days.");
-        System.out.println("The default fatality rate is " +  DEATH_RATE + ".");
+        System.out.println("The fatality rate is " +  DEATH_RATE + " for people under the age of 30.");
     }
 }
