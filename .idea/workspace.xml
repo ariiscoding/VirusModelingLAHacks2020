@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/Time.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Main.java" afterDir="false" />
     </list>
@@ -76,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585375938124</updated>
       <workItem from="1585375939829" duration="1897000" />
-      <workItem from="1585387277663" duration="5844000" />
+      <workItem from="1585387277663" duration="6443000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;Constants.java&quot;">
       <created>1585387127769</created>
@@ -106,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585424059510</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Restored Main">
+      <created>1585424163909</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585424163909</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,38 +125,39 @@
     <MESSAGE value="Added Person, State, Utils, and updated Constants" />
     <MESSAGE value="Added Cluster (clean class)" />
     <MESSAGE value="Updated Cluster &amp; Person. Now Cluster's basic methods are working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Cluster &amp; Person. Now Cluster's basic methods are working." />
+    <MESSAGE value="Restored Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restored Main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1103" y="1669" key="#com.intellij.ide.util.MemberChooser" timestamp="1585423378560">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="1103" y="1669" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585423378560" />
-    <state x="542" y="1540" key="CommitChangelistDialog2" timestamp="1585424059345">
+    <state x="542" y="1540" key="CommitChangelistDialog2" timestamp="1585424163730">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="1120" y="480" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387127525" />
-    <state x="542" y="1540" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424059345" />
-    <state width="1141" height="95" key="GridCell.Tab.0.bottom" timestamp="1585424140140">
+    <state x="542" y="1540" key="CommitChangelistDialog2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424163730" />
+    <state width="1141" height="243" key="GridCell.Tab.0.bottom" timestamp="1585424741281">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
-    <state width="1141" height="95" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424140140" />
-    <state width="1141" height="95" key="GridCell.Tab.0.center" timestamp="1585424140139">
+    <state width="1141" height="243" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424741281" />
+    <state width="1141" height="243" key="GridCell.Tab.0.center" timestamp="1585424741279">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
-    <state width="1141" height="95" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424140139" />
-    <state width="1141" height="95" key="GridCell.Tab.0.left" timestamp="1585424140138">
+    <state width="1141" height="243" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424741279" />
+    <state width="1141" height="243" key="GridCell.Tab.0.left" timestamp="1585424741279">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151062" />
-    <state width="1141" height="95" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424140138" />
-    <state width="1141" height="95" key="GridCell.Tab.0.right" timestamp="1585424140139">
+    <state width="1141" height="243" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424741279" />
+    <state width="1141" height="243" key="GridCell.Tab.0.right" timestamp="1585424741280">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
-    <state width="1141" height="95" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424140139" />
+    <state width="1141" height="243" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585424741280" />
     <state x="1326" y="517" key="SettingsEditor" timestamp="1585386459992">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
