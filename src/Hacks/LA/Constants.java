@@ -12,11 +12,13 @@ public class Constants {
     public static final int UPPER_AGE_LIMIT = 100; //inclusive upper limit
     public static final double PREEXISTING_CONDITION_PROB = 0.3;
     public static final double AVERAGE_MOBILITY = 0.2;
+    public static final int SELF_CURE_TIME = 30; //days
 
     //Healthcare system-related
     public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.15; //as a percentage of total population in a city
     public static final double HOSPITAL_FATALITY_RATE_DECREMENT = 0.8; //how much death rate is decreased by when in hospital
     public static final int AVERAGE_CURE_TIME = 10; //days
+    public static final int HOSPITAL_CURE_TIME = 10; //days. Release on this day.
 
     //Virus-related
     public static final double INFECTION_RATE = 0.7; //infection rate when one cell away
