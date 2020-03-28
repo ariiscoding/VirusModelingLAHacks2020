@@ -11,11 +11,20 @@ public class Hospital {
     private Hospital(){
     }
 
-    private void hospitalize(Person patient) {
-        if (!isFull()) {
-            capacity--;
-            patient.setState(HOSPITALIZED);
+    private int updateCapacity() {
+
+    }
+
+    public boolean hospitalize(Person patient) {
+        if (patient.getState() == "INFECTED") {
+            if (!isFull()) {
+                capacity--;
+                return true;
+            } else {
+                return false;
+            }
         }
+        return false;
     }
 
     private boolean isFull() {
