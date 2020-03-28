@@ -81,6 +81,27 @@ public class Person {
 
     private double calculateDeathRate () {
         //TODO: review this function when virus class is ready.
+        if(age>=80){
+            return 15.0;
+        }
+        else if(age>=70&&age<80){
+            return 8.0;
+        }
+        else if(age>=60&&age<70){
+            return 3.6;
+        }
+        else if(age>=50&&age<60){
+            return 1.3;
+        }
+        else if(age>=40&&age<50){
+            return 0.4;
+        }
+        else if(age>=10&&age<40){
+            return 0.2;
+        }
+        else{
+            return 0.0;
+        }
         return Constants.DEATH_RATE + (double)age * Constants.DEATH_RATE_INCREMENT;
     }
 
