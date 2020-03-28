@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -78,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585375938124</updated>
       <workItem from="1585375939829" duration="1897000" />
-      <workItem from="1585387277663" duration="3690000" />
+      <workItem from="1585387277663" duration="4328000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;Constants.java&quot;">
       <created>1585387127769</created>
@@ -87,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585387127769</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Person, State, Utils, and updated Constants">
+      <created>1585422151706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585422151706</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +99,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added &quot;Constants.java&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;Constants.java&quot;" />
+    <MESSAGE value="Added Person, State, Utils, and updated Constants" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Person, State, Utils, and updated Constants" />
   </component>
   <component name="WindowStateProjectService">
     <state x="542" y="1540" key="CommitChangelistDialog2" timestamp="1585422120755">
@@ -127,10 +132,11 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1326" y="517" key="SettingsEditor/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585386459992" />
-    <state x="1424" y="618" key="Vcs.Push.Dialog.v2" timestamp="1585412909718">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="1322" y="1894" key="Vcs.Push.Dialog.v2" timestamp="1585422382590">
+      <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="1424" y="618" key="Vcs.Push.Dialog.v2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585412909718" />
+    <state x="1322" y="1894" key="Vcs.Push.Dialog.v2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585422382590" />
     <state x="1497" y="2028" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585422141017">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
