@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MyPanel extends JPanel implements Runnable {
     private int pIndex = 0;
-    Queue<List<Coordinate>> coordinates;
+    Queue<List<Coordinate>>  coordinates;
 
     public MyPanel (Queue<List<Coordinate>> coordinates) {
         super();
@@ -21,9 +21,6 @@ public class MyPanel extends JPanel implements Runnable {
         this.coordinates = null;
     }
 
-    public void addQueue (Queue<List<Coordinate>> coordinates) {
-        this.coordinates = coordinates;
-    }
 
     @Override
     public void paint(Graphics g) {

@@ -7,7 +7,7 @@ public class Constants {
     public static final int MIN_ITERATION = 20;
 
     //Visualization-related
-    public static final boolean GRAPH_BACKEND = true; //turn on/off backend processing for graphics-needed data
+    public static final boolean GRAPH_BACKEND = false; //turn on/off backend processing for graphics-needed data
     public static final int CLUSTER_PER_ROW = 5; //how many clusters to show on one row
     public static final boolean CLUSTER_SCALING = true; //whether to compose by CLUSTER_PER_ROW
 
