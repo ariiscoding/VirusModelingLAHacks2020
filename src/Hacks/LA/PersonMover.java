@@ -11,6 +11,12 @@ public class PersonMover {
             return;
         }
 
+        //check against this person's mobility
+        double mobility = cluster.getPerson(x,y).getMobility();
+        if (!Utils.randomBool(mobility)) {
+            return;
+        }
+
         //shuffle directions
         shuffleDirs();
 
@@ -24,6 +30,7 @@ public class PersonMover {
         }
     }
 
+    //this function is not used. Can delete
     private static boolean validLocation (Cluster cluster, int x, int y) {
         if (x < 0 || x >= cluster.xLength || y < 0 || y >= cluster.yLength) {
             return false;

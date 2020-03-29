@@ -4,7 +4,7 @@ public class Constants {
     //Cluster-related
     public static final int CLUSTER_POPULATION_UPPER_LIMIT = 50;
     public static final int CLUSTER_POPULATION_LOWER_LIMIT = 30;
-    public static final int NUMBER_OF_CLUSTERS = 10000;
+    public static final int NUMBER_OF_CLUSTERS = 1000;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
 
     //Person-related
@@ -27,4 +27,5 @@ public class Constants {
     public static final double DEATH_RATE_INCREMENT_AGE = 0.004;
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
+    public static final int INFECTION_RADIUS = 2;
 }

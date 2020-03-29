@@ -10,10 +10,10 @@ public class Utils {
         return lower + random.nextInt(upper-lower);
     }
 
-    public static boolean randomBool (double trueProb) {
+    public static boolean randomBool (double trueThreshold) {
         //randomly generate a boolean, with a pre-defined probability of getting true
         double dice = random.nextGaussian();
-        if (dice <= trueProb) {
+        if (dice <= trueThreshold) {
             return true;
         }
         else {
