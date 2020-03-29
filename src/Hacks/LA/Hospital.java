@@ -8,7 +8,7 @@ public class Hospital {
     private double AVERAGE_CURE_TIME;
     private int capacity;
 
-    private Hospital(int population){
+    Hospital(int population){
         HOSPITAL_CAPACITY_PERCENTAGE = Constants.HOSPITAL_FATALITY_RATE_DECREMENT;
         HOSPITAL_FATALITY_RATE_DECREMENT = Constants.HOSPITAL_FATALITY_RATE_DECREMENT;
         AVERAGE_CURE_TIME = Constants.AVERAGE_CURE_TIME;

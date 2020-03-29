@@ -7,6 +7,7 @@ public class Cluster {
     //represent social cluster
 
     private Person[][] field;
+    private int population;
 
     Cluster () {
         //create a 100x100 field by default
@@ -15,6 +16,7 @@ public class Cluster {
 
     public Cluster (int xLength, int yLength, int population) {
         field = new Person[xLength][yLength];
+        this.population = population;
         spawn(xLength, yLength, population);
     }
 
@@ -42,5 +44,9 @@ public class Cluster {
         }
 
         return true;
+    }
+
+    public int getPopulation() {
+        return population;
     }
 }
