@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585467989904</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixed a bug where infected people are hospitalized before their incubation period is over.">
+      <created>1585469024558</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585469024558</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +244,8 @@
     <MESSAGE value="Added a cheker for Constants.java" />
     <MESSAGE value="Fixed a bug where people randomly infect themselves." />
     <MESSAGE value="Fixed a bug where people would duplicate themselves when moving between clusters." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug where people would duplicate themselves when moving between clusters." />
+    <MESSAGE value="Fixed a bug where infected people are hospitalized before their incubation period is over." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug where infected people are hospitalized before their incubation period is over." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1100" y="318" key="#com.intellij.ide.util.MemberChooser" timestamp="1585462736164">
@@ -265,30 +274,30 @@
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="765" y="1602" width="1173" height="717" key="DiffContextDialog/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585445469108" />
-    <state width="2518" height="204" key="GridCell.Tab.0.bottom" timestamp="1585468965686">
+    <state width="2518" height="566" key="GridCell.Tab.0.bottom" timestamp="1585469793716">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
     <state width="1331" height="243" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382570" />
-    <state width="2518" height="204" key="GridCell.Tab.0.bottom/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585468965686" />
-    <state width="2518" height="204" key="GridCell.Tab.0.center" timestamp="1585468965686">
+    <state width="2518" height="566" key="GridCell.Tab.0.bottom/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585469793716" />
+    <state width="2518" height="566" key="GridCell.Tab.0.center" timestamp="1585469793715">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
     <state width="1331" height="243" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382569" />
-    <state width="2518" height="204" key="GridCell.Tab.0.center/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585468965686" />
-    <state width="2518" height="204" key="GridCell.Tab.0.left" timestamp="1585468965685">
+    <state width="2518" height="566" key="GridCell.Tab.0.center/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585469793715" />
+    <state width="2518" height="566" key="GridCell.Tab.0.left" timestamp="1585469793714">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151062" />
     <state width="1331" height="243" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382569" />
-    <state width="2518" height="204" key="GridCell.Tab.0.left/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585468965685" />
-    <state width="2518" height="204" key="GridCell.Tab.0.right" timestamp="1585468965686">
+    <state width="2518" height="566" key="GridCell.Tab.0.left/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585469793714" />
+    <state width="2518" height="566" key="GridCell.Tab.0.right" timestamp="1585469793715">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state width="1141" height="218" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
     <state width="1331" height="243" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382570" />
-    <state width="2518" height="204" key="GridCell.Tab.0.right/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585468965686" />
+    <state width="2518" height="566" key="GridCell.Tab.0.right/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585469793715" />
     <state x="442" y="1463" key="MergeDialog" timestamp="1585451090907">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
@@ -301,14 +310,14 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1326" y="517" key="SettingsEditor/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585386459992" />
-    <state x="960" y="408" key="Vcs.Push.Dialog.v2" timestamp="1585468060557">
+    <state x="960" y="408" key="Vcs.Push.Dialog.v2" timestamp="1585469128221">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="480" y="216" key="Vcs.Push.Dialog.v2/0.23.1280.713@0.23.1280.713" timestamp="1585422658103" />
     <state x="480" y="217" key="Vcs.Push.Dialog.v2/0.23.1280.715@0.23.1280.715" timestamp="1585426958355" />
     <state x="1424" y="618" key="Vcs.Push.Dialog.v2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585412909718" />
     <state x="1072" y="1742" key="Vcs.Push.Dialog.v2/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585451107960" />
-    <state x="960" y="408" key="Vcs.Push.Dialog.v2/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585468060557" />
+    <state x="960" y="408" key="Vcs.Push.Dialog.v2/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585469128221" />
     <state x="765" y="1602" width="1173" height="717" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1585445469110">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>

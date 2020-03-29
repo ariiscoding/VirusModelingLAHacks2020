@@ -130,8 +130,8 @@ public class Cluster {
         if (field[centerX][centerY] == null || field[centerX][centerY].getState() != State.INFECTED) {
             return;
         }
-        for (int x = centerX - Constants.INFECTION_RADIUS; x <= Math.min(xLength-1, centerX + Constants.INFECTION_RADIUS); x++) {
-            for (int y = centerY - Constants.INFECTION_RADIUS; y <= Math.min(yLength-1, centerY + Constants.INFECTION_RADIUS); y++) {
+        for (int x = Math.max(0, centerX - Constants.INFECTION_RADIUS); x <= Math.min(xLength-1, centerX + Constants.INFECTION_RADIUS); x++) {
+            for (int y = Math.max(0,centerY - Constants.INFECTION_RADIUS); y <= Math.min(yLength-1, centerY + Constants.INFECTION_RADIUS); y++) {
                 if (infectablePerson(x, y)) {
                     //roll the dice
                     if (Utils.randomBool(Constants.INFECTION_RATE)) {

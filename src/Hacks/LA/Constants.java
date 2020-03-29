@@ -12,13 +12,13 @@ public class Constants {
     public static final int CLUSTER_X_LENGTH = 100;
     public static final int CLUSTER_Y_LENGTH = 100;
     public static final int NUMBER_OF_CLUSTERS = 10000;
-    public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
+    public static final double INTERCLUSTER_MOVEMENT_RATE = 0.25;
 
     //Person-related
     public static final int LOWER_AGE_LIMIT = 0; //inclusive lower limit
-    public static final int UPPER_AGE_LIMIT = 100; //inclusive upper limit
-    public static final double PREEXISTING_CONDITION_PROB = 0.3;
-    public static final double AVERAGE_MOBILITY = 0.2;
+    public static final int UPPER_AGE_LIMIT = 60; //inclusive upper limit
+    public static final double PREEXISTING_CONDITION_PROB = 0.45;
+    public static final double AVERAGE_MOBILITY = 0.4;
     public static final int SELF_CURE_TIME = 30; //days
 
     //Healthcare system-related
@@ -28,7 +28,7 @@ public class Constants {
     public static final int HOSPITAL_CURE_TIME = 10; //days. Release on this day.
 
     //Virus-related
-    public static final double INFECTION_RATE = 0.7; //infection rate when one cell away
+    public static final double INFECTION_RATE = 0.9; //infection rate
     public static final int INCUBATION_PERIOD = 14; //days
     public static final double DEATH_RATE = 0.01; //for people at and under the age of 30
     public static final double DEATH_RATE_INCREMENT_AGE = 0.004;
