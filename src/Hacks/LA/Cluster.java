@@ -8,6 +8,8 @@ public class Cluster {
 
     private Person[][] field;
     private int population;
+    public final int xLength;
+    public final int yLength;
 
     Cluster () {
         //create a 100x100 field by default
@@ -17,7 +19,36 @@ public class Cluster {
     public Cluster (int xLength, int yLength, int population) {
         field = new Person[xLength][yLength];
         this.population = population;
+        this.xLength = xLength;
+        this.yLength = yLength;
         spawn(xLength, yLength, population);
+    }
+
+    public boolean movePerson (int x, int y, int newX, int newY) {
+        if (canMoveHere(newX, newY)) {
+            field[x][y].setXY(newX, newY);
+            field[newX][newY] = field[x][y];
+            field[x][y] = null;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean canMoveHere (int x, int y) {
+        if (x < 0 || x >= xLength || y < 0 || y >= yLength) {
+            return false;
+        }
+        else if (field[x][y] != null) {
+            return false;
+        }
+        return true;
+    }
+
+    public Person getPerson (int x, int y) {
+        if (x < 0 || x >= field.length || y < 0 || y >= field.length) {
+            return null;
+        }
+        return field[x][y];
     }
 
     private void spawn (int xLength, int yLength, int population) {

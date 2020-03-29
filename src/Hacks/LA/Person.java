@@ -8,9 +8,8 @@ public class Person {
     private double deathRateWhenInfected;
     private boolean preexistingConditions;
     private double mobility;
-    private Integer infectionTime; //TODO: self-healing function
+    private Integer infectionTime;
     private Integer hospitalizedTime;
-    //Todo: add necessary setters
 
     public Person (int x, int y) {
         this(x, y, State.HEALTHY, Utils.randomInt(Constants.LOWER_AGE_LIMIT, Constants.UPPER_AGE_LIMIT+1), Utils.randomBool(Constants.PREEXISTING_CONDITION_PROB), Utils.randomProb(Constants.AVERAGE_MOBILITY));
@@ -130,5 +129,11 @@ public class Person {
 
     public Integer getInfectionTime() {
         return infectionTime.intValue();
+    }
+
+    void setXY (int newX, int newY) {
+        //setter with default access privilege
+        this.x = newX;
+        this.y = newY;
     }
 }
