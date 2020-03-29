@@ -37,6 +37,12 @@ public class Person {
     }
 
     public boolean hospitalize (Hospital hospital) {
+        if (state != State.INFECTED) {
+            return false;
+        }
+        else if (infectionTime == null || infectionTime + Constants.INCUBATION_PERIOD > Time. getTime()) {
+            return false;
+        }
         if (hospital.hospitalize(this)) {
             state = State.HOSPITALIZED;
             hospitalizedTime = Time.getTime();
