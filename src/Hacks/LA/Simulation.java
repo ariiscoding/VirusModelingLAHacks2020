@@ -21,8 +21,8 @@ public class Simulation extends Thread{
         city.initialInfection();
 
         while(!canEnd(stats)) {
+            stats.printStats();
             //main logic
-
             //loop through everyone
             city.loop();
             Time.incrementTime();
