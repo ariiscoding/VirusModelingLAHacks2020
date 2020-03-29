@@ -38,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="ari" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -358,26 +358,5 @@
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="955" y="1722" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585446105646" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Hacks/LA/Simulation.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Hacks/LA/PersonMover.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Hacks/LA/PersonMover.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
