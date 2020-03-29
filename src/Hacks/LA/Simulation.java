@@ -13,6 +13,7 @@ public class Simulation extends Thread{
 
     @Override
     public void run() {
+        Constants.check();
         //initializing city, hospital, and stats
         City city = new City();
         Hospital hospital = city.hospital;

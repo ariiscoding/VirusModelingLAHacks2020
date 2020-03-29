@@ -1,13 +1,15 @@
 package Hacks.LA;
 
+import java.util.InputMismatchException;
+
 public class Constants {
     //Simulation-related
-    public static final int MIN_ITERATION = 60;
+    public static final int MIN_ITERATION = 20;
 
     //Cluster-related
-    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 50;
-    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 30;
-    public static final int NUMBER_OF_CLUSTERS = 1000;
+    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 10;
+    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 3;
+    public static final int NUMBER_OF_CLUSTERS = 1;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
 
     //Person-related
@@ -31,5 +33,17 @@ public class Constants {
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
     public static final int INFECTION_RADIUS = 2;
-    public static final int INITIAL_INFECTED = 1000;
+    public static final int INITIAL_INFECTED = 2;
+
+
+    public static void check() {
+        //check validity of inputs
+        if (CLUSTER_POPULATION_UPPER_LIMIT < CLUSTER_POPULATION_LOWER_LIMIT) {
+            throw new InputMismatchException("Cluster initial population upper limit must not be less than the lower limit.");
+        }
+
+        if (INITIAL_INFECTED > CLUSTER_POPULATION_LOWER_LIMIT) {
+            throw new InputMismatchException("Initial infection amount must be less than population lower limit.");
+        }
+    }
 }
