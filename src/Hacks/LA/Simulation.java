@@ -25,7 +25,9 @@ public class Simulation extends Thread{
 
         while(!canEnd(stats)) {
             stats.survey();
-            stats.recordCoordinates();
+            if (Constants.GRAPH_BACKEND) {
+                stats.recordCoordinates();
+            }
             //main logic
             //loop through everyone
             city.loop();
