@@ -96,7 +96,7 @@ public class Person {
     }
 
     private double calculateDeathRate () {
-        //Death rate = (base death rate + age over 30 * increment percentage + pre-existing condition) / hospital decrement
+        //Death rate = (base death rate + age over 40 * increment percentage + pre-existing condition) / hospital decrement
         double deathRate = Constants.DEATH_RATE + Constants.DEATH_RATE_INCREMENT_AGE * Math.max(0, age - Constants.DANGER_AGE);
         if (preexistingConditions) {
             deathRate += Constants.DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS;
