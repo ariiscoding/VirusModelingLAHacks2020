@@ -135,7 +135,8 @@ public class Cluster {
                 if (count[0] >= Constants.INITIAL_INFECTED) {
                     return;
                 }
-                if (infectablePerson(x,y)) {
+
+                if (infectablePerson(x,y) && Utils.randomBool(Constants.INFECTION_RATE)) {
                     field[x][y].infect();
                     count[0]++;
                 }

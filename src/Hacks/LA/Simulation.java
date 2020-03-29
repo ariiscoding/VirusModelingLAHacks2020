@@ -3,7 +3,7 @@ package Hacks.LA;
 public class Simulation extends Thread{
     private boolean canEnd (City.Stats stats) {
         int time = Time.getTime();
-        if (time <= 0) { //run at least once
+        if (time <= Constants.MIN_ITERATION) {
             return false;
         }
 

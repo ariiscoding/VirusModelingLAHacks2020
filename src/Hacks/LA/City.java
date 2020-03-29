@@ -64,6 +64,8 @@ public class City {
             System.out.println("Infected: " + iStats.getInfected());
             System.out.println("Hospitalized: " + iStats.getHospitalized());
             System.out.printf("Deceased: " + iStats.getDeceased());
+            System.out.println();
+            System.out.println();
         }
 
         public void count (Person person) {
@@ -71,7 +73,7 @@ public class City {
             if (time >= iterationStats.size()) {
                 iterationStats.add(new IterationStats());
             }
-            iterationStats.get(time).count(person);
+            iterationStats.get(iterationStats.size()-1).count(person);
         }
 
         private int calcPopulation() {

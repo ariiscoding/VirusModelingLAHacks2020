@@ -1,6 +1,9 @@
 package Hacks.LA;
 
 public class Constants {
+    //Simulation-related
+    public static final int MIN_ITERATION = 60;
+
     //Cluster-related
     public static final int CLUSTER_POPULATION_UPPER_LIMIT = 50;
     public static final int CLUSTER_POPULATION_LOWER_LIMIT = 30;
@@ -28,5 +31,5 @@ public class Constants {
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
     public static final int INFECTION_RADIUS = 2;
-    public static final int INITIAL_INFECTED = 10;
+    public static final int INITIAL_INFECTED = 1000;
 }

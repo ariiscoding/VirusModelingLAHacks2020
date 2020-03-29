@@ -61,6 +61,9 @@ public class Person {
     }
 
     public boolean determineDeath (Hospital hospital) {
+        if (state != State.INFECTED && state != State.HOSPITALIZED) {
+            return false;
+        }
         //roll the dice and see if the person die
         double hades = Utils.randomProbUniform();
 
@@ -72,7 +75,7 @@ public class Person {
     }
 
     public boolean die (Hospital hospital) {
-        if (state == State.DECEASED) {
+        if (state == State.DECEASED || state == State.IMMUNE) {
             return false;
         }
 
