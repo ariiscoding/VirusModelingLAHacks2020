@@ -24,8 +24,9 @@ public class Constants {
     //Healthcare system-related
     public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.8; //as a percentage of total population in a city
     public static final double HOSPITAL_FATALITY_RATE_DECREMENT = 0.8; //how much death rate is decreased by when in hospital
-    public static final int AVERAGE_CURE_TIME = 10; //days
+    //public static final int AVERAGE_CURE_TIME = 10; //days
     public static final int HOSPITAL_CURE_TIME = 10; //days. Release on this day.
+    public static final int WAIT_BEFORE_HOSPITALIZATION = 0; //how many days are between showing symptoms and being admitted to hospital
 
     //Virus-related
     public static final double INFECTION_RATE = 0.9; //infection rate

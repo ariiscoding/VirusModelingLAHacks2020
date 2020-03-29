@@ -40,7 +40,7 @@ public class Person {
         if (state != State.INFECTED) {
             return false;
         }
-        else if (infectionTime == null || infectionTime + Constants.INCUBATION_PERIOD > Time. getTime()) {
+        else if (infectionTime == null || infectionTime + Constants.INCUBATION_PERIOD + Constants.WAIT_BEFORE_HOSPITALIZATION > Time. getTime()) {
             return false;
         }
         if (hospital.hospitalize(this)) {
