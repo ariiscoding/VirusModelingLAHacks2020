@@ -1,6 +1,8 @@
 package Hacks.LA;
 
+import javax.swing.*;
 import java.util.List;
+import java.util.Queue;
 
 public class Simulation extends Thread{
     private boolean canEnd (City.Stats stats) {
@@ -11,6 +13,21 @@ public class Simulation extends Thread{
 
         IterationStats iStats = stats.iterationStats.get(time-1); //get last round's stats
         return iStats.getInfected() == 0 && iStats.getIncubated() == 0 && iStats.getHospitalized() == 0;
+    }
+
+    private static void initPanel(Queue<List<Coordinate>> coordinates) {
+        MyPanel p = new MyPanel(coordinates);
+        Thread panelThread = new Thread(p);
+        JFrame frame = new JFrame();
+
+        int width = Constants.CLUSTER_X_LENGTH * Constants.CLUSTER_PER_ROW;
+        int length = 1 + (Constants.NUMBER_OF_CLUSTERS/Constants.CLUSTER_PER_ROW);
+        frame.setSize(500, 800);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setTitle("Coronavirus Simulation");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panelThread.start();
     }
 
     @Override
@@ -35,6 +52,11 @@ public class Simulation extends Thread{
         }
 
         stats.finalReport();
+
+        if (Constants.GRAPH_BACKEND) {
+            //graph
+            initPanel(stats.coordinates);
+        }
     }
 }
 

@@ -7,7 +7,7 @@ public class Constants {
     public static final int MIN_ITERATION = 20;
 
     //Visualization-related
-    public static final boolean GRAPH_BACKEND = false; //turn on/off backend processing for graphics-needed data
+    public static final boolean GRAPH_BACKEND = true; //turn on/off backend processing for graphics-needed data
     public static final int CLUSTER_PER_ROW = 5; //how many clusters to show on one row
     public static final boolean CLUSTER_SCALING = true; //whether to compose by CLUSTER_PER_ROW
 
@@ -16,7 +16,7 @@ public class Constants {
     public static final int CLUSTER_POPULATION_LOWER_LIMIT = 15;
     public static final int CLUSTER_X_LENGTH = 25;
     public static final int CLUSTER_Y_LENGTH = 25;
-    public static final int NUMBER_OF_CLUSTERS = 500;
+    public static final int NUMBER_OF_CLUSTERS = 5;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.3;
 
     //Person-related
@@ -41,7 +41,7 @@ public class Constants {
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.001/24;
     public static final int INFECTION_RADIUS = 15;
-    public static final int INITIAL_INFECTED = 500;
+    public static final int INITIAL_INFECTED = 50;
 
 
     public static void check() {
