@@ -7,11 +7,11 @@ public class Constants {
     public static final int MIN_ITERATION = 20;
 
     //Cluster-related
-    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 2;
-    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 1;
-    public static final int CLUSTER_X_LENGTH = 3;
-    public static final int CLUSTER_Y_LENGTH = 3;
-    public static final int NUMBER_OF_CLUSTERS = 1;
+    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 60;
+    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 45;
+    public static final int CLUSTER_X_LENGTH = 100;
+    public static final int CLUSTER_Y_LENGTH = 100;
+    public static final int NUMBER_OF_CLUSTERS = 10000;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
 
     //Person-related
@@ -22,7 +22,7 @@ public class Constants {
     public static final int SELF_CURE_TIME = 30; //days
 
     //Healthcare system-related
-    public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.15; //as a percentage of total population in a city
+    public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.8; //as a percentage of total population in a city
     public static final double HOSPITAL_FATALITY_RATE_DECREMENT = 0.8; //how much death rate is decreased by when in hospital
     public static final int AVERAGE_CURE_TIME = 10; //days
     public static final int HOSPITAL_CURE_TIME = 10; //days. Release on this day.
@@ -35,17 +35,23 @@ public class Constants {
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
     public static final int INFECTION_RADIUS = 2;
-    public static final int INITIAL_INFECTED = 0;
+    public static final int INITIAL_INFECTED = 500;
 
 
     public static void check() {
         //check validity of inputs
+        if (CLUSTER_POPULATION_LOWER_LIMIT < 0) {
+            throw new InputMismatchException("Cluster initial population must be non-negative.");
+        }
+        if (INITIAL_INFECTED < 0) {
+            throw new InputMismatchException("Initial infected must be non-negative.");
+        }
         if (CLUSTER_POPULATION_UPPER_LIMIT < CLUSTER_POPULATION_LOWER_LIMIT) {
             throw new InputMismatchException("Cluster initial population upper limit must not be less than the lower limit.");
         }
 
-        if (INITIAL_INFECTED > CLUSTER_POPULATION_LOWER_LIMIT) {
-            throw new InputMismatchException("Initial infection amount must be less than population lower limit.");
+        if (INITIAL_INFECTED > CLUSTER_POPULATION_LOWER_LIMIT * NUMBER_OF_CLUSTERS) {
+            throw new InputMismatchException("Initial infection amount must be less than population lower limit times number of clusters.");
         }
 
         if (CLUSTER_X_LENGTH * CLUSTER_Y_LENGTH < CLUSTER_POPULATION_UPPER_LIMIT) {
