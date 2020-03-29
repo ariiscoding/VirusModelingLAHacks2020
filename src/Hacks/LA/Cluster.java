@@ -1,9 +1,6 @@
 package Hacks.LA;
 
-import java.util.Deque;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class Cluster {
     //represent social cluster
@@ -12,6 +9,7 @@ public class Cluster {
     private int population;
     public final int xLength;
     public final int yLength;
+    private List<Person> rubric;
 
     Cluster () {
         //create a 100x100 field by default
@@ -23,7 +21,28 @@ public class Cluster {
         this.population = population;
         this.xLength = xLength;
         this.yLength = yLength;
+        rubric = new ArrayList<>();
         spawn(xLength, yLength, population);
+    }
+
+    public void recordCoordinates (int clusterIndex, boolean scale, List<Coordinate> list) {
+
+        //scaling related
+        int clusterX = clusterIndex % Constants.CLUSTER_PER_ROW;
+        int clusterY = clusterIndex / Constants.CLUSTER_PER_ROW;
+        int minX = clusterX * Constants.CLUSTER_X_LENGTH;
+        int minY = clusterY * Constants.CLUSTER_Y_LENGTH;
+
+        for (Person person : rubric) {
+            if (scale) {
+                int x = person.getX();
+                int y = person.getY();
+                list.add(new Coordinate(x + minX, y + minY, person.getState()));
+            }
+            else {
+                list.add(new Coordinate(person));
+            }
+        }
     }
 
     public void survey (IterationStats iStats) {
@@ -207,7 +226,9 @@ public class Cluster {
             int x = Utils.randomInt(0, xLength);
             int y = Utils.randomInt(0, yLength);
             if (availableForSpawn(x, y)) {
-                field[x][y] = new Person(x, y);
+                Person temp = new Person(x, y);
+                field[x][y] = temp;
+                rubric.add(temp);
                 population--;
             }
         }

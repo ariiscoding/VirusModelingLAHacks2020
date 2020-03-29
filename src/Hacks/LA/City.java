@@ -44,10 +44,21 @@ public class City {
     class Stats {
         private int totalPopulation;
         List<IterationStats> iterationStats; //remember the stats of each round
+        Queue<List<Coordinate>> coordinates;
 
         Stats () {
             totalPopulation = calcPopulation();
             iterationStats = new ArrayList<>();
+            coordinates = new ArrayDeque<>();
+        }
+
+        public void recordCoordinates() {
+            List<Coordinate> list = new ArrayList<>();
+            for (int i = 0; i < city.size(); i++) {
+                //coordinates.add(city.get(i).recordCoordinates(i, Constants.CLUSTER_SCALING));
+                city.get(i).recordCoordinates(i, Constants.CLUSTER_SCALING, list);
+            }
+            coordinates.add(list);
         }
 
         public void survey() {

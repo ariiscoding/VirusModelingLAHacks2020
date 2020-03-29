@@ -1,5 +1,7 @@
 package Hacks.LA;
 
+import java.util.List;
+
 public class Simulation extends Thread{
     private boolean canEnd (City.Stats stats) {
         int time = Time.getTime();
@@ -23,6 +25,7 @@ public class Simulation extends Thread{
 
         while(!canEnd(stats)) {
             stats.survey();
+            stats.recordCoordinates();
             //main logic
             //loop through everyone
             city.loop();
