@@ -22,7 +22,7 @@ public class Simulation extends Thread{
         city.initialInfection();
 
         while(!canEnd(stats)) {
-            stats.printStats();
+            stats.survey();
             //main logic
             //loop through everyone
             city.loop();

@@ -12,7 +12,7 @@ public class Utils {
 
     public static boolean randomBool (double trueThreshold) {
         //randomly generate a boolean, with a pre-defined probability of getting true
-        double dice = random.nextGaussian();
+        double dice = randomProbUniform();
         if (dice <= trueThreshold) {
             return true;
         }

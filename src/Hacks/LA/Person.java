@@ -47,12 +47,12 @@ public class Person {
     }
 
     public boolean cure (Hospital hospital) {
-        if (state == State.INFECTED && infectionTime != null && infectionTime + Constants.SELF_CURE_TIME >= Time.getTime()) {
+        if (state == State.INFECTED && infectionTime != null && infectionTime + Constants.SELF_CURE_TIME <= Time.getTime()) {
             state = State.IMMUNE;
             calculateDeathRate();
             return true;
         }
-        else if (state == State.HOSPITALIZED && hospitalizedTime != null && hospitalizedTime + Constants.HOSPITAL_CURE_TIME >= Time.getTime() && hospital.release(this)) {
+        else if (state == State.HOSPITALIZED && hospitalizedTime != null && hospitalizedTime + Constants.HOSPITAL_CURE_TIME <= Time.getTime() && hospital.release(this)) {
             state = State.IMMUNE;
             calculateDeathRate();
             return true;

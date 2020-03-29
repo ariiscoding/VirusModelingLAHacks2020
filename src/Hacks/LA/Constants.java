@@ -7,8 +7,10 @@ public class Constants {
     public static final int MIN_ITERATION = 20;
 
     //Cluster-related
-    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 10;
-    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 3;
+    public static final int CLUSTER_POPULATION_UPPER_LIMIT = 2;
+    public static final int CLUSTER_POPULATION_LOWER_LIMIT = 1;
+    public static final int CLUSTER_X_LENGTH = 3;
+    public static final int CLUSTER_Y_LENGTH = 3;
     public static final int NUMBER_OF_CLUSTERS = 1;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.05;
 
@@ -33,7 +35,7 @@ public class Constants {
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
     public static final int INFECTION_RADIUS = 2;
-    public static final int INITIAL_INFECTED = 2;
+    public static final int INITIAL_INFECTED = 1;
 
 
     public static void check() {
@@ -44,6 +46,10 @@ public class Constants {
 
         if (INITIAL_INFECTED > CLUSTER_POPULATION_LOWER_LIMIT) {
             throw new InputMismatchException("Initial infection amount must be less than population lower limit.");
+        }
+
+        if (CLUSTER_X_LENGTH * CLUSTER_Y_LENGTH < CLUSTER_POPULATION_UPPER_LIMIT) {
+            throw new InputMismatchException("The cluster X and Y lengths must be large enough for population upper limit.");
         }
     }
 }

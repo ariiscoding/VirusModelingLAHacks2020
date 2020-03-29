@@ -15,7 +15,7 @@ public class Cluster {
 
     Cluster () {
         //create a 100x100 field by default
-        this(100, 100, Utils.randomInt(Constants.CLUSTER_POPULATION_LOWER_LIMIT, Constants.CLUSTER_POPULATION_UPPER_LIMIT));
+        this(Constants.CLUSTER_X_LENGTH, Constants.CLUSTER_Y_LENGTH, Utils.randomInt(Constants.CLUSTER_POPULATION_LOWER_LIMIT, Constants.CLUSTER_POPULATION_UPPER_LIMIT));
     }
 
     public Cluster (int xLength, int yLength, int population) {
@@ -24,6 +24,14 @@ public class Cluster {
         this.xLength = xLength;
         this.yLength = yLength;
         spawn(xLength, yLength, population);
+    }
+
+    public void survey (IterationStats iStats) {
+        for (int x = 0; x < xLength; x++) {
+            for (int y = 0; y < yLength; y++) {
+                iStats.count(field[x][y]);
+            }
+        }
     }
 
     public void loop(City city, Queue<Person> interclusterMover) {
@@ -66,7 +74,7 @@ public class Cluster {
                 cur.updateState(city.hospital);
 
                 //step final: count
-                city.stats.count(cur);
+                //city.stats.count(cur);
             }
         }
     }
@@ -107,7 +115,7 @@ public class Cluster {
                 cur.updateState(city.hospital);
 
                 //step final: count
-                city.stats.count(cur);
+                //city.stats.count(cur);
             }
         }
         if (interclusterMover.isEmpty()) {

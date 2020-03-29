@@ -50,24 +50,34 @@ public class City {
             iterationStats = new ArrayList<>();
         }
 
-        public void printStats() {
+        public void survey() {
+            IterationStats iStats = new IterationStats();
+
+            for (Cluster cluster : city) {
+                cluster.survey(iStats);
+            }
+
+            iterationStats.add(iStats);
+            printStats(iStats);
+        }
+
+        public void printStats(IterationStats iStats) {
             if (iterationStats.isEmpty()) {
                 System.out.println("Population: " + totalPopulation);
-                System.out.println("No other stats currently available.");
-                return;
             }
-            IterationStats iStats = iterationStats.get(iterationStats.size()-1);
 
             System.out.println("Current time: " + iStats.getTime());
             System.out.println("Healthy population: " + iStats.getHealthy());
             System.out.println("Incubated: " + iStats.getIncubated());
             System.out.println("Infected: " + iStats.getInfected());
             System.out.println("Hospitalized: " + iStats.getHospitalized());
+            System.out.println("Immune: " + iStats.getImmune());
             System.out.printf("Deceased: " + iStats.getDeceased());
             System.out.println();
             System.out.println();
         }
 
+        @Deprecated
         public void count (Person person) {
             int time = Time.getTime();
             if (time >= iterationStats.size()) {
