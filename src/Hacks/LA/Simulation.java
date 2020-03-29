@@ -31,6 +31,8 @@ public class Simulation extends Thread{
             city.loop();
             Time.incrementTime();
         }
+
+        stats.finalReport();
     }
 }
 

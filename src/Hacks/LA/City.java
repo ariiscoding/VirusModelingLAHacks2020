@@ -52,6 +52,24 @@ public class City {
             coordinates = new ArrayDeque<>();
         }
 
+        public void finalReport() {
+            IterationStats iStats = iterationStats.get(iterationStats.size()-1);
+            double percentHealthy = (double)(iStats.getHealthy()) / (double)(totalPopulation);
+            double percentSurvived = (double)(iStats.getImmune())/(double)(totalPopulation);
+            double percentDeceased = (double)(iStats.getDeceased())/(double)(totalPopulation);
+            double percentInfectedTotal = percentDeceased + percentSurvived;
+
+            System.out.println("\n \n");
+            System.out.println("------------------------------------");
+            System.out.println("Total time elapsed: " + Time.getTime());
+            System.out.println("Percent of population not infected: " + percentHealthy);
+            System.out.println("Percent infected (total): " + percentInfectedTotal);
+            System.out.println("Percent survived after infection: " + percentSurvived);
+            System.out.println("Percent deceased: " + percentDeceased);
+            System.out.println("------------------------------------");
+            System.out.println("\n \n");
+        }
+
         public void recordCoordinates() {
             List<Coordinate> list = new ArrayList<>();
             for (int i = 0; i < city.size(); i++) {
