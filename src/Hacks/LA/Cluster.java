@@ -58,6 +58,7 @@ public class Cluster {
                     //note: we don't count it in this case, otherwise we would over count
                 if (Utils.randomBool(Constants.INTERCLUSTER_MOVEMENT_RATE)) {
                     interclusterMover.offer(cur);
+                    field[x][y] = null;
                     continue;
                 }
 
@@ -97,6 +98,7 @@ public class Cluster {
                 else {
                     field[x][y]= interclusterMover.poll();
                     cur = field[x][y];
+                    cur.setXY(x, y);
                 }
 
                 //step 1: update state (such as from hospitalized -> immune)
@@ -171,9 +173,10 @@ public class Cluster {
 
     public boolean movePerson (int x, int y, int newX, int newY) {
         if (canMoveHere(newX, newY)) {
-            field[x][y].setXY(newX, newY);
-            field[newX][newY] = field[x][y];
+            Person temp = field[x][y];
             field[x][y] = null;
+            field[newX][newY] = temp;
+            temp.setXY(newX, newY);
             return true;
         }
         return false;
@@ -203,19 +206,16 @@ public class Cluster {
         while (population > 0) {
             int x = Utils.randomInt(0, xLength);
             int y = Utils.randomInt(0, yLength);
-            if (isAvailable(x, y)) {
+            if (availableForSpawn(x, y)) {
                 field[x][y] = new Person(x, y);
                 population--;
             }
         }
     }
 
-    private boolean isAvailable (int x, int y) {
-        //return if the box is available
-        if (x > field.length || y > field[x].length) {
-            return false;
-        }
-        else if (field[x][y] != null && field[x][y].getState() != State.DECEASED) {
+    private boolean availableForSpawn (int x, int y) {
+        //return if the box is available for spawning a new person
+        if (x >= field.length || y >= field[x].length || x < 0 || y < 0 || field[x][y] != null) {
             return false;
         }
 

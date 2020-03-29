@@ -48,11 +48,13 @@ public class Person {
 
     public boolean cure (Hospital hospital) {
         if (state == State.INFECTED && infectionTime != null && infectionTime + Constants.SELF_CURE_TIME <= Time.getTime()) {
+            //self-cure
             state = State.IMMUNE;
             calculateDeathRate();
             return true;
         }
         else if (state == State.HOSPITALIZED && hospitalizedTime != null && hospitalizedTime + Constants.HOSPITAL_CURE_TIME <= Time.getTime() && hospital.release(this)) {
+            //out of hospital
             state = State.IMMUNE;
             calculateDeathRate();
             return true;

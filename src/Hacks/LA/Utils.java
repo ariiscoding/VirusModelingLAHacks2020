@@ -25,11 +25,13 @@ public class Utils {
         return random.nextDouble();
     }
 
+    @Deprecated
     public static double randomProb (double center) {
         //randomly generate a probability between 0 (inclusive) and 1 (exclusive)
         return randomProb(center, 0, 1);
     }
 
+    @Deprecated
     public static double randomProb (double center, double lower, double upper) {
         //randomly generate a probability centered around center and between lower (inclusive) and upper (exclusive)
 
