@@ -18,7 +18,7 @@ public class Simulation extends Thread{
         Hospital hospital = city.hospital;
         City.Stats stats = city.stats;
 
-        //TODO: initialize certain amount of people with the virus
+        city.initialInfection();
 
         while(!canEnd(stats)) {
             //main logic

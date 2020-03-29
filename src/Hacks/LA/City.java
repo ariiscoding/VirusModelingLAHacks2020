@@ -31,6 +31,15 @@ public class City {
         }
     }
 
+    public void initialInfection() {
+        int[] count = new int[] {0};
+        while (count[0] < Constants.INITIAL_INFECTED) {
+            for (Cluster cluster : city) {
+                cluster.initialInfection(count);
+            }
+        }
+    }
+
 
     class Stats {
         private int totalPopulation;

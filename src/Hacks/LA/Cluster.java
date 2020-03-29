@@ -129,6 +129,20 @@ public class Cluster {
         }
     }
 
+    public void initialInfection (int[] count) {
+        for (int x = 0; x < xLength; x++) {
+            for (int y = 0; y < yLength; y++) {
+                if (count[0] >= Constants.INITIAL_INFECTED) {
+                    return;
+                }
+                if (infectablePerson(x,y)) {
+                    field[x][y].infect();
+                    count[0]++;
+                }
+            }
+        }
+    }
+
     public boolean validCell (int x, int y) {
         return x >= 0 && x < xLength && y >=0 && y < yLength;
     }
