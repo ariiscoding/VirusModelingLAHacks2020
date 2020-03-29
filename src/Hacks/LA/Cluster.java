@@ -125,6 +125,9 @@ public class Cluster {
     }
 
     private void areaInfect (int centerX, int centerY) {
+        if (field[centerX][centerY] == null || field[centerX][centerY].getState() != State.INFECTED) {
+            return;
+        }
         for (int x = centerX - Constants.INFECTION_RADIUS; x <= Math.min(xLength-1, centerX + Constants.INFECTION_RADIUS); x++) {
             for (int y = centerY - Constants.INFECTION_RADIUS; y <= Math.min(yLength-1, centerY + Constants.INFECTION_RADIUS); y++) {
                 if (infectablePerson(x, y)) {

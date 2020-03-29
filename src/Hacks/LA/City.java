@@ -57,13 +57,14 @@ public class City {
                 cluster.survey(iStats);
             }
 
-            iterationStats.add(iStats);
             printStats(iStats);
+            iterationStats.add(iStats);
         }
 
         public void printStats(IterationStats iStats) {
             if (iterationStats.isEmpty()) {
                 System.out.println("Population: " + totalPopulation);
+                System.out.println();
             }
 
             System.out.println("Current time: " + iStats.getTime());

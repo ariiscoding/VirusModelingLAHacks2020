@@ -35,7 +35,7 @@ public class Constants {
     public static final int DANGER_AGE = 40;
     public static final double DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS = 0.06;
     public static final int INFECTION_RADIUS = 2;
-    public static final int INITIAL_INFECTED = 1;
+    public static final int INITIAL_INFECTED = 0;
 
 
     public static void check() {
