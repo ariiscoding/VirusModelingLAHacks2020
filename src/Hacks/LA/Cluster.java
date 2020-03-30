@@ -54,6 +54,7 @@ public class Cluster {
     }
 
     public void loop(City city, Queue<Person> interclusterMover) {
+        //this is the last part of this flow-through function to loop through every person in the simulation.
         //loop through every space
 
         for (int x = 0; x < xLength; x++) {
@@ -92,9 +93,6 @@ public class Cluster {
 
                 //step 5: check status again, such as infected -> hospitalized
                 cur.updateState(city.hospital);
-
-                //step final: count
-                //city.stats.count(cur);
             }
         }
     }
@@ -134,9 +132,6 @@ public class Cluster {
 
                 //step 5: check status again, such as infected -> hospitalized
                 cur.updateState(city.hospital);
-
-                //step final: count
-                //city.stats.count(cur);
             }
         }
         if (interclusterMover.isEmpty()) {
@@ -151,8 +146,8 @@ public class Cluster {
         }
         for (int x = Math.max(0, centerX - Constants.INFECTION_RADIUS); x <= Math.min(xLength-1, centerX + Constants.INFECTION_RADIUS); x++) {
             for (int y = Math.max(0, centerY - Constants.INFECTION_RADIUS); y <= Math.min(yLength-1, centerY + Constants.INFECTION_RADIUS); y++) {
-                if (infectablePerson(x, y)) {
-                    //roll the dice
+                if (infectiblePerson(x, y)) {
+                    //roll the dice to decide if the person gets infected
                     if (Utils.randomBool(Constants.INFECTION_RATE)) {
                         field[x][y].infect();
                     }
@@ -168,7 +163,7 @@ public class Cluster {
                     return;
                 }
 
-                if (infectablePerson(x,y) && Utils.randomBool(Constants.INFECTION_RATE)) {
+                if (infectiblePerson(x,y) && Utils.randomBool(Constants.INFECTION_RATE)) {
                     field[x][y].infect();
                     count[0]++;
                 }
@@ -180,7 +175,7 @@ public class Cluster {
         return x >= 0 && x < xLength && y >=0 && y < yLength;
     }
 
-    public boolean infectablePerson (int x, int y) {
+    public boolean infectiblePerson(int x, int y) {
         if (validCell(x, y)) {
             Person person = field[x][y];
             if (person != null && person.getState() == State.HEALTHY) {
@@ -191,6 +186,7 @@ public class Cluster {
     }
 
     public boolean movePerson (int x, int y, int newX, int newY) {
+        //move a person from x,y to newX,newY
         if (canMoveHere(newX, newY)) {
             Person temp = field[x][y];
             field[x][y] = null;
@@ -202,6 +198,7 @@ public class Cluster {
     }
 
     public boolean canMoveHere (int x, int y) {
+        //decide if x, y is a valid coordinate to move a person into
         if (x < 0 || x >= xLength || y < 0 || y >= yLength) {
             return false;
         }
@@ -212,6 +209,7 @@ public class Cluster {
     }
 
     public Person getPerson (int x, int y) {
+        //safely get a person at the target coordinate
         if (x < 0 || x >= field.length || y < 0 || y >= field.length) {
             return null;
         }
@@ -219,6 +217,7 @@ public class Cluster {
     }
 
     private void spawn (int xLength, int yLength, int population) {
+        //initialize the cluster with all healthy people. This method does not handle initial infection.
         if (xLength * yLength < population) {
             throw new InputMismatchException("The field size is not large enough for the population size.");
         }

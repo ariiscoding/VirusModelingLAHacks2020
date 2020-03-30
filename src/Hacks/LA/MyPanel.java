@@ -6,6 +6,9 @@ import java.util.*;
 import java.util.List;
 
 public class MyPanel extends JPanel implements Runnable {
+    //This is the main logic to animate our simulation
+    //Not working yet.
+
     private int pIndex = 0;
     Queue<List<Coordinate>>  coordinates;
 

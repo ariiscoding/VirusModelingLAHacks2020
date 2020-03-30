@@ -12,6 +12,7 @@ public class Person {
     private Integer hospitalizedTime;
 
     public Person (int x, int y) {
+        //generate a person with randomly generated stats
         this(x, y, State.HEALTHY, Utils.randomInt(Constants.LOWER_AGE_LIMIT, Constants.UPPER_AGE_LIMIT+1), Utils.randomBool(Constants.PREEXISTING_CONDITION_PROB), Utils.randomProb(Constants.AVERAGE_MOBILITY));
     }
 
@@ -28,6 +29,10 @@ public class Person {
     }
 
     public void updateState (Hospital hospital) {
+        //A helper function for "loop"
+        //handles hospitalization, cure, and killing mechanisms for each person
+        //Sub-functions will handle condition checking automatically
+
         if (state == State.DECEASED) {
             return;
         }
@@ -37,6 +42,11 @@ public class Person {
     }
 
     public boolean hospitalize (Hospital hospital) {
+        //Check if a person is sick and has been sick long enough to be hospitalized
+        //then communicate with hospital to check capacity
+
+        //If all are true, hospitalize this person
+
         if (state != State.INFECTED) {
             return false;
         }
@@ -53,6 +63,8 @@ public class Person {
     }
 
     public boolean cure (Hospital hospital) {
+        //Check if the person has been sick long enough to cure him/her
+
         if (state == State.INFECTED && infectionTime != null && infectionTime + Constants.SELF_CURE_TIME <= Time.getTime()) {
             //self-cure
             state = State.IMMUNE;
@@ -69,13 +81,14 @@ public class Person {
     }
 
     public boolean determineDeath (Hospital hospital) {
+        //Check if the person can possibly die (only if infected or hospitalized)
+        //If yes, roll a dice and see if the person is unlucky enough to die
+
         if (state != State.INFECTED && state != State.HOSPITALIZED) {
             return false;
         }
-        //roll the dice and see if the person die
-        double hades = Utils.randomProbUniform();
 
-        if (hades <= deathRateWhenInfected) {
+        if (Utils.randomBool(deathRateWhenInfected)) {
             return die(hospital);
         }
 
@@ -83,6 +96,9 @@ public class Person {
     }
 
     public boolean die (Hospital hospital) {
+        //Handle the killing logics
+        //Also communicate with hospital to release capacity if necessary
+
         if (state == State.DECEASED || state == State.IMMUNE) {
             return false;
         }
@@ -97,6 +113,7 @@ public class Person {
 
     public boolean infect() {
         //Infect a person. Return false if the person cannot be infected.
+
         if (state != State.HEALTHY) {
             return false;
         }
@@ -108,6 +125,7 @@ public class Person {
 
     private double calculateDeathRate () {
         //Death rate = (base death rate + age over 40 * increment percentage + pre-existing condition) / hospital decrement
+
         double deathRate = Constants.DEATH_RATE + Constants.DEATH_RATE_INCREMENT_AGE * Math.max(0, age - Constants.DANGER_AGE);
         if (preexistingConditions) {
             deathRate += Constants.DEATH_RATE_INCREMENT_WITH_PREEXISTING_CONDITIONS;
@@ -118,6 +136,13 @@ public class Person {
 
         this.deathRateWhenInfected = deathRate;
         return deathRate;
+    }
+
+    void setXY (int newX, int newY) {
+        //setter with default access privilege
+
+        this.x = newX;
+        this.y = newY;
     }
 
     public int getX() {
@@ -150,11 +175,5 @@ public class Person {
 
     public Integer getInfectionTime() {
         return infectionTime.intValue();
-    }
-
-    void setXY (int newX, int newY) {
-        //setter with default access privilege
-        this.x = newX;
-        this.y = newY;
     }
 }

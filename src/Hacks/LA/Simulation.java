@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.Queue;
 
 public class Simulation extends Thread{
+    //this class handles the main logic of simulation
+
     private boolean canEnd (City.Stats stats) {
+        //Determines if the simulation can end
+
         int time = Time.getTime();
         if (time <= Constants.MIN_ITERATION) {
             return false;
@@ -16,6 +20,9 @@ public class Simulation extends Thread{
     }
 
     private static void initPanel(Queue<List<Coordinate>> coordinates) {
+        //Initiate animation
+        //Not functional yet
+
         MyPanel p = new MyPanel(coordinates);
         Thread panelThread = new Thread(p);
         JFrame frame = new JFrame();
@@ -54,7 +61,7 @@ public class Simulation extends Thread{
         stats.finalReport();
 
         if (Constants.GRAPH_BACKEND) {
-            //graph
+            //animation
             initPanel(stats.coordinates);
         }
     }

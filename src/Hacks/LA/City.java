@@ -17,6 +17,8 @@ public class City {
     }
 
     public void loop() {
+        //This is part of a flow-through function to iterate through and operate on each person in our simulation.
+        //It has to be a flow-through function because of our decision to encapsulate most classes for safety.
         Queue<Person> interclusterMover = new ArrayDeque<>();
         for (Cluster cluster : city) {
             cluster.loop(this, interclusterMover);
@@ -32,6 +34,7 @@ public class City {
     }
 
     public void initialInfection() {
+        //Handles the initial infection of citizens
         int[] count = new int[] {0};
         while (count[0] < Constants.INITIAL_INFECTED) {
             for (Cluster cluster : city) {
@@ -42,6 +45,8 @@ public class City {
 
 
     class Stats {
+        //a class to collect, store, and report statistics about our simulation
+
         private int totalPopulation;
         List<IterationStats> iterationStats; //remember the stats of each round
         Queue<List<Coordinate>> coordinates;
@@ -71,6 +76,9 @@ public class City {
         }
 
         public void recordCoordinates() {
+            //this is to collect data to support animation.
+            //it records x, y, and state of each person *in unchanged order* every iteration
+
             List<Coordinate> list = new ArrayList<>();
             for (int i = 0; i < city.size(); i++) {
                 //coordinates.add(city.get(i).recordCoordinates(i, Constants.CLUSTER_SCALING));
@@ -80,6 +88,8 @@ public class City {
         }
 
         public void survey() {
+            //this is to collect summary statistics for each iteration
+
             IterationStats iStats = new IterationStats();
 
             for (Cluster cluster : city) {
@@ -109,6 +119,10 @@ public class City {
 
         @Deprecated
         public void count (Person person) {
+            //This is an older version of "survey". It was integrated in "loop" function
+            //but I decided to deprecate it because the logic was too complex and
+            //might not handle "interclusterMover" correcly
+
             int time = Time.getTime();
             if (time >= iterationStats.size()) {
                 iterationStats.add(new IterationStats());
@@ -117,6 +131,8 @@ public class City {
         }
 
         private int calcPopulation() {
+            //Calculate initial population and store it in Stats object that should
+            //be initiated with City class
             int n = 0;
             for (Cluster cluster : city) {
                 n += cluster.getPopulation();

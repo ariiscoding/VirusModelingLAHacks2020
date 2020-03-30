@@ -16,7 +16,7 @@ public class Constants {
     public static final int CLUSTER_POPULATION_LOWER_LIMIT = 15;
     public static final int CLUSTER_X_LENGTH = 25;
     public static final int CLUSTER_Y_LENGTH = 25;
-    public static final int NUMBER_OF_CLUSTERS = 5;
+    public static final int NUMBER_OF_CLUSTERS = 500;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.3;
 
     //Person-related
@@ -29,7 +29,6 @@ public class Constants {
     //Hospital-related
     public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.08; //as a percentage of total population in a city
     public static final double HOSPITAL_FATALITY_RATE_DECREMENT = 0.8; //how much death rate is decreased by when in hospital
-    //public static final int AVERAGE_CURE_TIME = 10; //days
     public static final int HOSPITAL_CURE_TIME = 10 * 24; //hours
     public static final int WAIT_BEFORE_HOSPITALIZATION = 5 * 24; //how many hours are between showing symptoms and being admitted to hospital
 

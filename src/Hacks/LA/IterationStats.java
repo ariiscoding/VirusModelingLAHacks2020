@@ -1,6 +1,7 @@
 package Hacks.LA;
 
 public class IterationStats {
+    //this class calculates and saves statistics of each round of simulation.
     int time;
     int healthy;
     int incubated;
@@ -20,6 +21,7 @@ public class IterationStats {
     }
 
     public void count (Person person) {
+        //each iteration, we count how many people are in each category.
         if (person == null) {
             return;
         }

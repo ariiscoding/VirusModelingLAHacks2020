@@ -1,6 +1,9 @@
 package Hacks.LA;
 
 public class Time {
+    //Utilized a singleton to provide global access to time in simulation
+    //Currently we view each unit of time as *one hour*
+
     private static Time timeInstance;
     private static int time;
 
@@ -10,6 +13,7 @@ public class Time {
 
     public static int getTime() {
         if (timeInstance == null) {
+            //lazy initiation
             timeInstance = new Time();
         }
 

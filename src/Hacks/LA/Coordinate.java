@@ -1,6 +1,7 @@
 package Hacks.LA;
 
 public class Coordinate {
+    //this class stores coordinates and state of each person, for support of animation.
     private int x;
     private int y;
     private State state;

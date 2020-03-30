@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb4f427-d8ee-4ecb-a65d-4897711770aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hacks/LA/MyPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Cluster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Dirs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Dirs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/IterationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/IterationStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/MyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/PersonMover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/PersonMover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hacks/LA/Virus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="ari" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,6 +123,8 @@
       <workItem from="1585375939829" duration="1897000" />
       <workItem from="1585387277663" duration="3690000" />
       <workItem from="1585473705219" duration="3744000" />
+      <workItem from="1585522059701" duration="294000" />
+      <workItem from="1585532031980" duration="2466000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;Constants.java&quot;">
       <created>1585387127769</created>
@@ -264,6 +279,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added &quot;Constants.java&quot;" />
     <MESSAGE value="added virus info" />
@@ -310,34 +335,38 @@
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
     <state x="765" y="1602" width="1173" height="717" key="DiffContextDialog/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585445469108" />
-    <state width="1685" height="243" key="GridCell.Tab.0.bottom" timestamp="1585487218693">
+    <state width="1638" height="130" key="GridCell.Tab.0.bottom" timestamp="1585534579059">
       <screen x="483" y="1463" width="1680" height="1027" />
     </state>
+    <state width="1638" height="628" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585522354063" />
     <state width="1141" height="218" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
     <state width="1331" height="243" key="GridCell.Tab.0.bottom/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382570" />
     <state width="1238" height="243" key="GridCell.Tab.0.bottom/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585483331552" />
-    <state width="1685" height="243" key="GridCell.Tab.0.bottom/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585487218693" />
-    <state width="1685" height="243" key="GridCell.Tab.0.center" timestamp="1585487218692">
+    <state width="1638" height="130" key="GridCell.Tab.0.bottom/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585534579059" />
+    <state width="1638" height="130" key="GridCell.Tab.0.center" timestamp="1585534579057">
       <screen x="483" y="1463" width="1680" height="1027" />
     </state>
+    <state width="1638" height="628" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585522354063" />
     <state width="1141" height="218" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
     <state width="1331" height="243" key="GridCell.Tab.0.center/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382569" />
     <state width="1238" height="243" key="GridCell.Tab.0.center/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585483331551" />
-    <state width="1685" height="243" key="GridCell.Tab.0.center/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585487218692" />
-    <state width="1685" height="243" key="GridCell.Tab.0.left" timestamp="1585487218691">
+    <state width="1638" height="130" key="GridCell.Tab.0.center/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585534579057" />
+    <state width="1638" height="130" key="GridCell.Tab.0.left" timestamp="1585534579056">
       <screen x="483" y="1463" width="1680" height="1027" />
     </state>
+    <state width="1638" height="628" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585522354062" />
     <state width="1141" height="218" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151062" />
     <state width="1331" height="243" key="GridCell.Tab.0.left/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382569" />
     <state width="1238" height="243" key="GridCell.Tab.0.left/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585483331550" />
-    <state width="1685" height="243" key="GridCell.Tab.0.left/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585487218691" />
-    <state width="1685" height="243" key="GridCell.Tab.0.right" timestamp="1585487218693">
+    <state width="1638" height="130" key="GridCell.Tab.0.left/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585534579056" />
+    <state width="1638" height="130" key="GridCell.Tab.0.right" timestamp="1585534579058">
       <screen x="483" y="1463" width="1680" height="1027" />
     </state>
+    <state width="1638" height="628" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585522354063" />
     <state width="1141" height="218" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@0.23.2560.1417" timestamp="1585387151063" />
     <state width="1331" height="243" key="GridCell.Tab.0.right/0.23.2560.1417/-860.1463.1302.937/442.1463.1680.1027@442.1463.1680.1027" timestamp="1585450382570" />
     <state width="1238" height="243" key="GridCell.Tab.0.right/0.23.2560.1417/483.1463.1680.1027@0.23.2560.1417" timestamp="1585483331551" />
-    <state width="1685" height="243" key="GridCell.Tab.0.right/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585487218693" />
+    <state width="1638" height="130" key="GridCell.Tab.0.right/0.23.2560.1417/483.1463.1680.1027@483.1463.1680.1027" timestamp="1585534579058" />
     <state x="442" y="1463" key="MergeDialog" timestamp="1585451090907">
       <screen x="442" y="1463" width="1680" height="1027" />
     </state>
