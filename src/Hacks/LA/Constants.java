@@ -5,6 +5,7 @@ import java.util.InputMismatchException;
 public class Constants {
     //Simulation-related
     public static final int MIN_ITERATION = 20;
+    public static final String TIME_UNIT = "Hour"; //This is only cosmetic. Does not affect actual simulation.
 
     //Visualization-related
     public static final boolean GRAPH_BACKEND = false; //turn on/off backend processing for graphics-needed data

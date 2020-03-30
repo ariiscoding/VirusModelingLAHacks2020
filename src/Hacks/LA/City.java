@@ -66,7 +66,7 @@ public class City {
 
             System.out.println("\n \n");
             System.out.println("------------------------------------");
-            System.out.println("Total time elapsed: " + Time.getTime());
+            System.out.println("Total time elapsed (" + Constants.TIME_UNIT + "): " + Time.getTime());
             System.out.println("Percent of population not infected: " + percentHealthy);
             System.out.println("Percent infected (total): " + percentInfectedTotal);
             System.out.println("Percent survived after infection: " + percentSurvived);
@@ -106,7 +106,7 @@ public class City {
                 System.out.println();
             }
 
-            System.out.println("Current time: " + iStats.getTime());
+            System.out.println("Current time (" + Constants.TIME_UNIT +"): " + iStats.getTime());
             System.out.println("Healthy population: " + iStats.getHealthy());
             System.out.println("Incubated: " + iStats.getIncubated());
             System.out.println("Infected: " + iStats.getInfected());
