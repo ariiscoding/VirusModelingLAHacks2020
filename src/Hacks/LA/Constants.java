@@ -31,10 +31,10 @@ public class Constants {
     public static final double HOSPITAL_CAPACITY_PERCENTAGE = 0.08; //as a percentage of total population in a city
     public static final double HOSPITAL_FATALITY_RATE_DECREMENT = 0.8; //how much death rate is decreased by when in hospital
     public static final int HOSPITAL_CURE_TIME = 10 * 24; //hours
-    public static final int WAIT_BEFORE_HOSPITALIZATION = 5 * 24; //how many hours are between showing symptoms and being admitted to hospital
+    public static final int WAIT_BEFORE_HOSPITALIZATION = 4 * 24; //how many hours are between showing symptoms and being admitted to hospital
 
     //Virus-related
-    public static final double INFECTION_RATE = 0.9; //infection rate
+    public static final double INFECTION_RATE = 0.85; //infection rate
     public static final int INCUBATION_PERIOD = 14 * 24; //hours
     public static final double DEATH_RATE = 0.0001/24; //for people at and under the age of 30
     public static final double DEATH_RATE_INCREMENT_AGE = 0.00002/24;
