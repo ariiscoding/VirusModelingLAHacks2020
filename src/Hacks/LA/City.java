@@ -66,13 +66,15 @@ public class City {
             double percentInfectedTotal = percentDeceased + percentSurvived;
 
             System.out.println("\n \n");
-            System.out.println("------------------------------------");
+            System.out.println("-----------------------------------------------------------------------------");
             System.out.println("Total time elapsed (" + Constants.TIME_UNIT + "): " + Time.getTime());
-            System.out.println("Percent of population not infected: " + percentHealthy);
-            System.out.println("Percent infected (total): " + percentInfectedTotal);
-            System.out.println("Percent survived after infection: " + percentSurvived);
-            System.out.println("Percent deceased: " + percentDeceased);
-            System.out.println("------------------------------------");
+            System.out.println("Percent of population not infected: " + String.format("%.2f%%", percentHealthy * 100));
+            System.out.println("Percent infected (total): " + String.format("%.2f%%", percentInfectedTotal * 100));
+            if (percentInfectedTotal > 0d) {
+                System.out.println("Percent survived out of infected: " + String.format("%.2f%%", percentSurvived/percentInfectedTotal * 100));
+                System.out.println("Percent deceased out of infected: " + String.format("%.2f%%", percentDeceased/percentInfectedTotal * 100));
+            }
+            System.out.println("-----------------------------------------------------------------------------");
             System.out.println("\n \n");
         }
 

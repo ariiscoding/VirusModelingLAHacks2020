@@ -17,7 +17,7 @@ public class Constants {
     public static final int CLUSTER_POPULATION_LOWER_LIMIT = 15;
     public static final int CLUSTER_X_LENGTH = 25;
     public static final int CLUSTER_Y_LENGTH = 25;
-    public static final int NUMBER_OF_CLUSTERS = 500;
+    public static final int NUMBER_OF_CLUSTERS = 1000;
     public static final double INTERCLUSTER_MOVEMENT_RATE = 0.3;
 
     //Person-related
