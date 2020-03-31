@@ -1,5 +1,6 @@
 package Hacks.LA;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class City {
@@ -100,11 +101,21 @@ public class City {
             iterationStats.add(iStats);
         }
 
+        public void initialCityInfo() {
+
+            System.out.println("");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("Total population: " + totalPopulation);
+            System.out.println("There are " + city.size() + " clusters in this simulation.");
+            System.out.println("Each cluster is " + Constants.CLUSTER_X_LENGTH + " by " + Constants.CLUSTER_Y_LENGTH + ".");
+            System.out.println("The hospital has the capacity of " + hospital.getCapacity() + " in this simulation.");
+            System.out.println("The wait time for patients who show symptoms to be admitted to hospital is " + Constants.WAIT_BEFORE_HOSPITALIZATION + " " + Constants.TIME_UNIT + ".");
+            System.out.println("-----------------------------------------------------------------------------");
+            System.out.println("");
+        }
+
         public void printStats(IterationStats iStats) {
-            if (iterationStats.isEmpty()) {
-                System.out.println("Population: " + totalPopulation);
-                System.out.println();
-            }
+            //this is the code for initial reporting. I added another function for initial reporting so this is no longer needed.
 
             System.out.println("Current time (" + Constants.TIME_UNIT +"): " + iStats.getTime());
             System.out.println("Healthy population: " + iStats.getHealthy());

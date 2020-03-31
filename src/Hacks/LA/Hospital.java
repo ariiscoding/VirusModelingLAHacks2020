@@ -39,4 +39,8 @@ public class Hospital {
         }
         return false;
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }

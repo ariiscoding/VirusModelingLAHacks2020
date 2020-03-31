@@ -49,6 +49,7 @@ public class Simulation extends Thread{
 
         //Initial reporting
         Virus.getInfo();
+        stats.initialCityInfo();
 
         while(!canEnd(stats)) {
             stats.survey();
